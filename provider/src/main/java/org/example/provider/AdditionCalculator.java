@@ -1,18 +1,20 @@
 package org.example.provider;
 
 import org.example.service.Calculator;
+import org.example.service.annotation.Calculation;
 
+@Calculation("Addition")
 public class AdditionCalculator implements Calculator {
 
     public AdditionCalculator() {
-
-
-        System.out.println("Number Addition Created "+ calculateNumbers(20,10));
-        System.out.println();
+        System.out.println("Number Added = "+ calculateNumbers(25,5));
     }
+
 
     @Override
-    public int calculateNumbers(int a, int b) {
-         return a + b;
+    public Integer calculateNumbers(Integer a, Integer b) {
+
+        return a + b;
     }
+
 }
