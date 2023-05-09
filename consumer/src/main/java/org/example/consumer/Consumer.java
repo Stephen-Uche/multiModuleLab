@@ -12,13 +12,22 @@ import java.util.stream.Collectors;
 public class Consumer {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException, InstantiationException {
 
+
+
+
+
+
         //Look for classes in package org.example.provider
+
         Set<Class> classes = findAllClasses("org.example.provider");
+
+
+
 
         //Check if the class has the annotation @Calculation
 
         for (var c : classes) {
-            var annotation = (Calculation)c.getAnnotation(Calculation.class);
+            var annotation = (Calculation) c.getAnnotation(Calculation.class);
             if (annotation != null) {
                 System.out.println(annotation.value());
                 var o = c.getConstructor().newInstance();
@@ -36,6 +45,22 @@ public class Consumer {
         }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    private static void AdditionInterface(){
+        System.out.println(findAllClasses("org.example.provider").equals("Addition"));
+    }
+
 
     private static Set<Class> findAllClasses(String packageName) {
         InputStream stream = ClassLoader.getSystemClassLoader()
@@ -58,4 +83,5 @@ public class Consumer {
 
         return null;
     }
+
 }
