@@ -8,16 +8,20 @@ import java.util.Scanner;
 @Calculation("Subtraction")
 public class SubtractionCalculator implements Calculator {
     public SubtractionCalculator() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("""
-                ===============
+                ===========
                 """);
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter first number ");
         Integer numb1 = scanner.nextInt();
         System.out.println("Enter second number ");
         Integer numb2 = scanner.nextInt();
         Integer result = numb1 - numb2;
         System.out.println("Result = "+ result);
+        System.out.println("""
+                ---------------------
+                """);
     }
 
     @Override

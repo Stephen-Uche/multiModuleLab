@@ -8,6 +8,9 @@ import java.util.Scanner;
 @Calculation("Division")
 public class DivisionCalculator implements Calculator {
     public DivisionCalculator() {
+        System.out.println("""
+                ===========
+                """);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number ");
         Integer numb1 = scanner.nextInt();
@@ -15,6 +18,9 @@ public class DivisionCalculator implements Calculator {
         Integer numb2 = scanner.nextInt();
         Integer result = numb1 / numb2;
         System.out.println("Result = "+ result);
+        System.out.println("""
+                ---------------------
+                """);
     }
 
     @Override
