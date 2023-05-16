@@ -1,5 +1,5 @@
 module org.example.service {
 
-    exports org.example.service.annotation;
+    exports annotation;
     exports org.example.service;
 }

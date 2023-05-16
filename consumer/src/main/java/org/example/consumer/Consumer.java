@@ -1,6 +1,6 @@
 package org.example.consumer;
 
-import org.example.service.annotation.Calculation;
+import annotation.Calculation;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
