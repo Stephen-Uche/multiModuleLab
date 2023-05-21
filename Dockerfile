@@ -11,4 +11,4 @@ COPY --from=build /app/consumer/target/*.jar /app/org.example.consumer.jar
 COPY --from=build /app/provider/target/*.jar /app/lib/org.example.provider.jar
 COPY --from=build /app/service/target/*.jar /app/lib/org.example.service.jar
 
-ENTRYPOINT java --module-path /app:/app/lib/org.example.service.jar:/app/lib/org.example.consumer.jar -m org.example.consumer/org.example.consumer.Consumer
+ENTRYPOINT java --module-path /app:/app/lib/org.example.service.jar:/app/lib/org.example.provider.jar -m consumer/org.example.consumer.Consumer
