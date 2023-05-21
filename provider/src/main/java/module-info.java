@@ -5,6 +5,6 @@ import org.example.service.Calculator;
 
 module org.example.provider {
     requires org.example.service;
-   // exports org.example.provider;
+    exports org.example.provider;
     provides Calculator with AdditionCalculator, MultiplicationCalculator, SubtractionCalculator;
 }
