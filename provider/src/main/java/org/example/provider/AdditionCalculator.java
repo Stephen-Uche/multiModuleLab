@@ -8,16 +8,14 @@ import java.util.Scanner;
 @Calculation("Addition")
 public class AdditionCalculator implements Calculator {
     public AdditionCalculator() {
-        System.out.println("""
-                ========
-                """);
+        System.out.println("========\n");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number ");
         Integer numb1 = scanner.nextInt();
         System.out.println("Enter second number ");
         Integer numb2 = scanner.nextInt();
         Integer result = numb1 + numb2;
-        System.out.println("Result = "+ result);
+        System.out.println("Result = " + result);
         System.out.println("""
                 ---------------------
                 """);
@@ -27,7 +25,7 @@ public class AdditionCalculator implements Calculator {
     @Override
     public Integer calculateNumbers(Integer a, Integer b) {
 
-        return  a + b;
+        return a + b;
 
     }
 

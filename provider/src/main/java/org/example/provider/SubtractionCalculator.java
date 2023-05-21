@@ -18,7 +18,7 @@ public class SubtractionCalculator implements Calculator {
         System.out.println("Enter second number ");
         Integer numb2 = scanner.nextInt();
         Integer result = numb1 - numb2;
-        System.out.println("Result = "+ result);
+        System.out.println("Result = " + result);
         System.out.println("""
                 ---------------------
                 """);

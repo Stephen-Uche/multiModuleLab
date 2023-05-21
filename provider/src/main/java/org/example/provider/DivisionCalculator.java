@@ -17,7 +17,7 @@ public class DivisionCalculator implements Calculator {
         System.out.println("Enter second number ");
         Integer numb2 = scanner.nextInt();
         Integer result = numb1 / numb2;
-        System.out.println("Result = "+ result);
+        System.out.println("Result = " + result);
         System.out.println("""
                 ---------------------
                 """);
@@ -25,6 +25,6 @@ public class DivisionCalculator implements Calculator {
 
     @Override
     public Integer calculateNumbers(Integer a, Integer b) {
-        return a/b;
+        return a / b;
     }
 }

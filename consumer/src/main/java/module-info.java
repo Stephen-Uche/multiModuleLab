@@ -5,7 +5,4 @@ module org.example.consumer {
     uses org.example.service.Calculator;
 
 
-
-
-
 }
