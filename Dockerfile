@@ -6,11 +6,11 @@ FROM maven:3.8.7-eclipse-temurin-19-alpine as build
 
 COPY . /app
 WORKDIR /app
+
+FROM eclipse-temurin:19-allpine-jre
 RUN mvn clean package
+COPY --from=build /app/consumer/target/*.jar ./
+COPY --from=build /app/provider/target/*.jar ./
+COPY --from=build /app/service/target/*.jar ./
 
-FROM eclipse-temurin:19-jre-alpine
-COPY --from=build /app/consumer/target/*.jar /app/org.example.consumer.jar
-COPY --from=build /app/provider/target/*.jar /app/lib/org.example.provider.jar
-COPY --from=build /app/service/target/*.jar /app/lib/org.example.service.jar
-
-ENTRYPOINT java --module-path /app:/app/lib/org.example.service.jar:/app/lib/org.example.provider.jar -m org.example.consumer/org.example.consumer.Consumer
+ENTRYPOINT["java","--module-path","provider\target\classes", "-m","org.example.consumer/org.example.consumer.Consumer"]

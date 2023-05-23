@@ -1,13 +1,20 @@
 package org.example.provider;
 
-import org.example.service.Calculator;
 import annotation.Calculation;
+import org.example.service.Calculator;
 
 import java.util.Scanner;
 
 @Calculation("Subtraction")
 public class SubtractionCalculator implements Calculator {
-    public SubtractionCalculator() {
+
+
+    @Override
+    public Integer calculateNumber() {
+        return Subtract();
+    }
+
+    public int Subtract() {
         System.out.println("""
                 ===========
                 """);
@@ -17,15 +24,8 @@ public class SubtractionCalculator implements Calculator {
         Integer numb1 = scanner.nextInt();
         System.out.println("Enter second number ");
         Integer numb2 = scanner.nextInt();
-        Integer result = numb1 - numb2;
-        System.out.println("Result = " + result);
-        System.out.println("""
-                ---------------------
-                """);
-    }
+        System.out.println("Result = " );
 
-    @Override
-    public Integer calculateNumbers(Integer a, Integer b) {
-        return a - b;
+        return numb1 - numb2;
     }
 }

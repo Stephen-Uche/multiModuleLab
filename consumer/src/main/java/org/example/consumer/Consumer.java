@@ -41,9 +41,9 @@ public class Consumer {
     }
 
 
-    private static void AdditionInterface() {
-        System.out.println(findAllClasses("org.example.provider").equals("Addition"));
-    }
+//    private static void AdditionInterface() {
+//        System.out.println(findAllClasses("org.example.provider").equals("Addition"));
+//    }
 
 
     private static Set<Class> findAllClasses(String packageName) {
