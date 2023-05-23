@@ -14,4 +14,4 @@ COPY --from=build /app/consumer/target/*.jar ./app
 COPY --from=build /app/provider/target/*.jar ./app
 COPY --from=build /app/service/target/*.jar ./app
 
-ENTRYPOINT["java","--module-path","provider\target\classes", "-m","org.example.consumer/org.example.consumer.Consumer"]
+ENTRYPOINT["customjre\bin\java.exe","--module-path","provider\target\classes", "-m","org.example.consumer/org.example.consumer.Consumer"]
