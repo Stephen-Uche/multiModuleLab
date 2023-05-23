@@ -1,14 +1,14 @@
 
 
 
-FROM maven:3.8.7-alpine:3 as build
+FROM maven:3.8.7-eclipse-temurin-8-alpine as build
 
 
 COPY . /app
 WORKDIR /app
 RUN mvn clean package
 
-FROM alpine:3
+FROM eclipse-temurin:8-jre-alpine
 
 COPY --from=build /app/consumer/target/*.jar ./app
 COPY --from=build /app/provider/target/*.jar ./app
