@@ -2,6 +2,7 @@
 
 
 FROM maven:3.8.7-eclipse-temurin-19-alpine as build
+ADD alpine-minirootfs-3.17.3-x86_64.tar.gz /
 
 
 COPY . /app
