@@ -11,19 +11,19 @@ public class SubtractionCalculator implements Calculator {
 
     @Override
     public Integer calculateNumber() {
-        return Subtract();
+        return subtract();
     }
 
-    public int Subtract() {
+    public int subtract() {
         System.out.println("""
                 ===========
                 """);
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter first number ");
-        Integer numb1 = scanner.nextInt();
+        int numb1 = scanner.nextInt();
         System.out.println("Enter second number ");
-        Integer numb2 = scanner.nextInt();
+        int numb2 = scanner.nextInt();
         System.out.println("Result = " );
 
         return numb1 - numb2;

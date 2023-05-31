@@ -17,9 +17,9 @@ public class AdditionCalculator implements Calculator {
                 """);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number ");
-        Integer numb1 = scanner.nextInt();
+        int numb1 = scanner.nextInt();
         System.out.println("Enter second number ");
-        Integer numb2 = scanner.nextInt();
+        int numb2 = scanner.nextInt();
         System.out.println("Result = " );
         return numb1 + numb2;
     }

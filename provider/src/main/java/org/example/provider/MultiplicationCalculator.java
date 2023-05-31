@@ -12,9 +12,9 @@ public class MultiplicationCalculator implements Calculator {
 
     @Override
     public Integer calculateNumber() {
-        return Multiply();
+        return multiply();
     }
-    public int Multiply() {
+    public int multiply() {
         System.out.println("""
                 ==============
                 """);
