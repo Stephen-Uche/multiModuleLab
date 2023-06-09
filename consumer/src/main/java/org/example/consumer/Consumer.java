@@ -1,6 +1,7 @@
 package org.example.consumer;
 
 import annotation.Calculation;
+import org.example.service.Calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -21,7 +22,7 @@ public class Consumer {
         //Check if the class has the annotation @Calculation
 
         for (var c : classes) {
-            var annotation = (Calculation) c.getAnnotation(Calculation.class);
+            var annotation = (Calculation)c.getAnnotation(Calculator.class);
             if (annotation != null) {
                 System.out.println(annotation.value());
                 var o = c.getConstructor().newInstance();
